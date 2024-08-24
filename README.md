@@ -1,8 +1,8 @@
-###  DATE: 
+###  DATE: 24-08-2024
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: Akshaya S
+###  ROLL NO :212223220006
+###  DEPARTMENT: Information Technology
 
 
 # EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
@@ -77,12 +77,29 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
+```
+IRstatus=HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_3);
+  while (1)
+  {
+	  if(IRstatus==1){
+		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+		  HAL_Delay(1000);
+		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_SET);
+		  HAL_Delay(1000);
+
+	  }
+	  else{
+		  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+		  HAL_Delay(1000);
+	  }
+```
 
 
 
 ## Output  :
  
- 
+ ![Screenshot (47)](https://github.com/user-attachments/assets/34d3eefc-0d90-4af2-9fd1-0801b656d431)
+
  
  
 ## Result :
